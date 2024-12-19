@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 name=${1:-fzfmenu}
 shift 1
