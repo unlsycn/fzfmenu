@@ -18,8 +18,8 @@ echo '
 
 cat >>${pipe_input} <&0 &
 {
-    hyprctl clients | rg "title: ${name}$" || alacritty -T ${name} -o 'font.size=18' -e bash ${wrapper_script} ${pipe_input} ${pipe_output} "$@"
-    hyprctl dispatch focuswindow "title:${name}$"
+    hyprctl clients | rg "title: ${name}" || alacritty -T ${name} -o 'font.size=18' -e bash ${wrapper_script} ${pipe_input} ${pipe_output} "$@"
+    hyprctl dispatch focuswindow "title:${name}"
 } &>/dev/null &
 cat ${pipe_output}
 
